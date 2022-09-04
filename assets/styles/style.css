@@ -1,0 +1,114 @@
+.container {
+    display: grid;
+    grid-template-rows: 10% 1fr 15%;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    text-align: center;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 1.5fr;
+    grid-template-areas: "logo nav acc";
+    align-content: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.menu {
+    margin: 1%;
+    text-decoration: none;
+
+}
+
+.menu:hover {
+    text-decoration: underline;
+}
+
+.acc {
+    grid-area: acc;
+    position: relative;
+}
+
+.basket {
+    position: absolute;
+    right: 0px;
+    top: -3px;
+}
+
+.sidebar {
+    background-color: #F2AE4D;
+    grid-area: sidebar;
+    text-align: start;
+    display: grid;
+    align-content: center;
+
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #011F3A;
+    margin-left: 15%;
+}
+
+.sidebar > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #011F3A;
+    margin-left: 15%;
+}
+
+input {
+    border-radius: 35px;
+    border-width: 0px;
+    background: #3D5675;
+    color: #FFFFFF;
+    width:228px;
+    height: 56px;
+    margin-left: 15%;
+}
+
+.main {
+    background-color: #F2AE4D;
+    grid-area: main;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    position: relative;
+    text-align: left;
+}
+
+.left,
+.centr,
+.right {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+}
